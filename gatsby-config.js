@@ -9,16 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Blog on Applying Machine Learning to CyberSecurity`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Sidharth Baveja`,
+      summary: `Currently I am a Master of Computer Science Student at Texas A&M`
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Blog of Seminars in the Course CSCE 689: Machine Learning Based CyberDenfenses`,
+    siteUrl: `https://ml-to-cs.sidharthbaveja.com`
   },
   plugins: [
     `gatsby-plugin-image`,
