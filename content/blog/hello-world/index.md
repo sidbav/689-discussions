@@ -1,9 +1,11 @@
 ---
-title: "Blog based on CSCE 689"
-date: "2023-01-31"
+title: "Hello World, starting a blog ML-to-CS"
+date: "2023-01-30"
 description: ""
 ---
 
-This website will be my place to post a summary of the discussions that take during the course CSCE 689.
+After speaking with [Professor Marcus Botacin](https://marcusbotacin.github.io/), I decided to create this site so share my learnings from the seminars in [CSCE 689: Machine Learned Based CyberDefenses](https://marcusbotacin.github.io/teaching/ml-1). Rather than keeping the knowledge behind closed doors, anyone and everyone can access what I have learned in the seminars for this class.
 
-This will allow me to share my knowledge with others, rather than just sharing it with myself.
+The domain for this site is 'ml-to-cs', which is intended to mean: Machine Learned Applied to Cyber Security.
+
+
