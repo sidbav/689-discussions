@@ -1,3 +1,10 @@
+# TODO
+- figure out subdomains so that I can use
+ml-to-cs.sidbav.com/some-path
+and that redirects to ml-to-cs.sidharthbaveja.com/some-path
+  - shorted domain is always better!
+
+-----
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
