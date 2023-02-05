@@ -8,7 +8,7 @@ For the Seminar of week 2 of classes we read the paper: [Machine Learning (In) S
 
 I was the one who actually presented the Seminar; it is broken into two parts, Part 1 covering sections 3-5 of the paper (this summary here), and [Part 2](discussion-2.2) covering sections 6-8.
 
-Here is a link, so here are the links to the slides: [Part 1](https://docs.google.com/presentation/d/1QgTdtfIhijsssgfLxCh5vIc6KHJ4pM1_nZcC4hsIzyM/edit?usp=sharing).
+[Here](https://docs.google.com/presentation/d/1QgTdtfIhijsssgfLxCh5vIc6KHJ4pM1_nZcC4hsIzyM/edit?usp=sharing) is the link to the slides I used during presentation.
 
 # Summary
 - There are many different Machine Learning techniques that can be applied to the solving problems in Cybersecurity. For malware detection, classification is very common technique. But is it important to keep in mind that there is no one size fits all approach to machine learning; for malware detection clustering methods (such as KMeans) can be applied to further classify a malware file into a specific malware family type.
@@ -60,6 +60,6 @@ Here is a link, so here are the links to the slides: [Part 1](https://docs.googl
 # Discussion
 - Cybersecurity is unlike other applications of machine learning because when a file is generated is very important. When splitting training and testing data, one *should* split the data based on the time a file was created. Files generated before Date X should be in the training data, and files created on or after Date X belong to the test Data. The AI models must be trained to classify/detect files that are generated in the future, and due to concept drift and evolution, it is very important temporal information of files are taken into account.
 
+- When developing ML models in cybersecurity, typically we set a standard for the False Positive Rate; then the other metrics (accuracy, recall, etc.) are computed. If a model does not meet the FPR, then the model is not utilized.
 
-
-
+- In machine learning, the greater amount of the data you have typically leads to better models that can be used for predictions, however, when designing a model that will be running on a user's machine, you will have limited computing resources. Thus it becomes an HUGE engineering problem of how to go about solving this.
