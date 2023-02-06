@@ -21,19 +21,19 @@ I was the one who actually presented the Seminar; it is broken into two parts, P
 - Data Leakage (Temporal Inconsistency), is a common problem that occurs when data is both present in the training and test dataset, leading to an artificial gain in performance of a classifier
   - In academia, a common method used to mitigate this is the put timestamps of when a virus was first detected on [VirusTotal](https://www.virustotal.com/).
 
-- Data Labelling is also a very important task since if the labels of the data are incorrect, then a ML model will be incorrectly classifying data (Garbage In, Garbage Out). VirusTotal provides data for 60 Antivirus engines, each providing their own unique label (no consistency), thus in academia each researcher comes up with their own labelling.
+- Data Labelling is also a very important task since if the labels of the data are incorrect, then a ML model will be incorrectly classifying data (Garbage In, Garbage Out). VirusTotal provides data for 60 Antivirus engines, each providing their own unique label (no consistency), thus in academia each researcher comes up with their own labelling standard.
   - Another key aspect to consider is that labels can change over time, or if new malware has been developed, an AV engine may assign a temporary label to some data. Depending on when a malicious file is labelled is can lead to different results in different datasets/classifiers (temporary label utilized vs actual correct label)
     - Temporary labels assigned due to time needed for human analysts to go through the files.
 
 - There are multiple techniques that can be used to deal with class imbalances on the dataset side:
   - **Undersampling**: From the majority class remove data to have the same amount of data as the minority class. When doing this need to ensure that the majority class distribution is kept the same as before; need to consider the temporal information when doing this as well.
   - **OverSampling**: From the minority class generate more feature vectors. One such technique is called SMOTE: the minority class is plotted in the feature space, and linear interpolation takes place between points that are close to each.
-    - It is important to also keep in mind the temporal information here, considering the data distributions.
+    - It is important to also keep in mind the temporal information here, considering the data distributions at each distinct time period.
     - Oversampling will generate more feature vectors (malware or goodware), but it will NOT generate more binary files.
 
-- A more complex model does not lead to better results; sometimes simple is better.
+- A more complex model does not lead to better results; sometimes simple is better. Having a model that can classify a greater number of classes does not mean the model will perform better than a model that classifies the malware into a fewer number of classes.
 
-- Depending on the nature of a dataset, one type of machine learning model will perform better than others.
+- Depending on the nature of a dataset, some machine learning models will be better suited than others.
 
 - Although our goal is to have a representative dataset, that does not necessarily mean we require the largest dataset; there can come a point in the dataset where the gains of utilizing it are only marginally better, so the tradeoff in performance gains may not be worth the increased training size.
 
@@ -55,7 +55,7 @@ I was the one who actually presented the Seminar; it is broken into two parts, P
 - As mentioned in previous presentations, attackers are constantly creating new malware files, therefore, it it important that ML Models utilized for in an AV pipeline are being updated to reflect these changes. However, what was not previously mentioned was the feature extractors must also be updated to reflect this drift, pipelines must use drift detectors to cover to signal updates are needed for both models and feature extractors
   - Updating both has been shown to improve performance.
 
-- In a first presentation, it was also mentioned that malware detection must be robust. One step in ensuring that our malware detection is robust is ensuring the our feature vectors (hence our feature extractors) are robust. If our features are not robust, they can easily be exploited by attackers.s
+- In the first seminar, it was also mentioned that malware detection must be robust. One step in ensuring that our malware detection is robust is ensuring the our feature vectors (hence our feature extractors) are robust. If our features are not robust, they can easily be exploited by attackers.s
 
 # Discussion
 - Cybersecurity is unlike other applications of machine learning because when a file is generated is very important. When splitting training and testing data, one *should* split the data based on the time a file was created. Files generated before Date X should be in the training data, and files created on or after Date X belong to the test Data. The AI models must be trained to classify/detect files that are generated in the future, and due to concept drift and evolution, it is very important temporal information of files are taken into account.
@@ -63,3 +63,5 @@ I was the one who actually presented the Seminar; it is broken into two parts, P
 - When developing ML models in cybersecurity, typically we set a standard for the False Positive Rate; then the other metrics (accuracy, recall, etc.) are computed. If a model does not meet the FPR, then the model is not utilized.
 
 - In machine learning, the greater amount of the data you have typically leads to better models that can be used for predictions, however, when designing a model that will be running on a user's machine, you will have limited computing resources. Thus it becomes an HUGE engineering problem of how to go about solving this.
+
+- During the seminar I showed a plot that showed that after only a 40% portion of an original dataset was needed to achieve essentially the same results as using 100% of the original dataset for train and testing. So I was asked, does that mean 40% is always how much data should be utilized from the dataset? The answer to this question is NO, there is no one size that fits all. Depending on one's dataset and model, different results will be achieved. In addition, at the end of the day you need to make tradeoffs. Depending on one's needs, changes will be made.

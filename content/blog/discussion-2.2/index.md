@@ -71,4 +71,6 @@ I was the one who actually presented the Seminar; it is broken into two parts, [
 
 - Questions of legality of developing malware on your own machine were asked. I believe it should be legal since you are only causing harm to yourself, and companies also have penetration testers who try to find vulnerabilities in in their AV models. Penetration testers are important as it ensures the defenders are always trying to outperform each other.
 
-- Random Forest typically perform very well in cybersecurity since they are able to handle concept drift. When concept drift occurs, only a few of the trees need to be updated. Adpative Random Forests can be used in this situation.
+- Random Forest typically perform very well in cybersecurity since they are able to handle concept drift. When concept drift occurs, only a few of the trees need to be updated. Adaptive Random Forests can be used in this situation.
+
+- Why do AVs not update their models every hour? everyday? Simply it is infeasible! Although some level of drift is occurring everyday (as new malware is being developed), it is not feasible to update machine learning models everyday. Tradeoffs are made on on the frequency of model updates.
