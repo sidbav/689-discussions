@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning (In) Security: A Stream of Problems - Part 2"
 date: "2023-02-05"
-description: "Summary of Seminar 2"
+description: "Summary of Seminar 2.2"
 ---
 
 For the Seminar of week 2 of classes we read the paper: [Machine Learning (In) Security: A Stream of Problems](https://arxiv.org/abs/2010.16045) by Ceschin et al.

@@ -9,13 +9,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Blog on Applying Machine Learning to CyberSecurity`,
+    title: `Applying Machine Learning to CyberSecurity`,
     author: {
       name: `Sidharth Baveja`,
-      summary: `Master of Computer Science Student at Texas A&M. Get in touch by sending me an email: sidharthbav at gmail dot com`
+      summary: `Master of Computer Science Student at Texas A&M`
     },
-    description: `Blog of Seminars in the Course CSCE 689: Machine Learning Based CyberDenfenses`,
-    siteUrl: `https://ml-to-cs.sidharthbaveja.com`
+    description: `Website to summarize Seminars in the Course CSCE 689: Machine Learning Based CyberDenfenses`,
+    siteUrl: `https://ml-to-cs.sidharthbaveja.com`,
+    social: {
+      email: `sidharthbav at gmail dot com`
+    }
   },
   plugins: [
     `gatsby-plugin-image`,
