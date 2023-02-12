@@ -7,15 +7,16 @@ description: "Discussion 3.1"
 For the Seminar of week 3 of classes we read the paper: [Dos and Don'ts of Machine Learning in Computer Security](https://www.usenix.org/conference/usenixsecurity22/presentation/arp) by Arp et al.
 
 This paper was split into two seminars, the first seminar covered Pitfalls of the Applying Machine Learning to Cyber Security.
-To read to summary and discussion of the second half of this paper, look [here](discussion-3.2).
+To read to summary and discussion of the second half of this paper, look [here](/discussion-3.2).
 
 # Summary
 - Overly optimistic results are not great since they will be able to perform in a real world environment, and they are not representative of how a model will perform in the real world.
 
 - **Sample Bias**: This occurs when a dataset does not represent the true distribution of data where this model will be applied.
   - For example, there are only a few Android Datasets; these datasets are not representative of the real world scenarios, thus more data needs to be generated (synthetic data)
-  - This can occur when an AV engine is trained on a global dataset, with data from the Apple app store, Google Play and Indian app stores, but the AV engine is applied to only the Indian app stores; the data is simply not representative of the context which which the model produced is being applied.
-  - Transfer learning can also be applied (not really sure how though?)
+  - Transfer learning can also be applied (not really sure how though?):
+    - After doing some more research (one link [here](https://adapt-python.github.io/adapt/examples/Sample_bias_example.html)), it seems to give more weight to underrepresented classes? I believe this approach can reduce sampling bias, but is not a fool proof way of going about reducing bias; bias may still exist.
+  - A real example of sampling bias is: This can occur when an AV engine is trained on a global dataset, with data from the Apple app store, Google Play and Indian app stores, but the AV engine is applied to only the Indian app stores; the data is simply not representative of the context which which the model produced is being applied.
 
 - **Label Inaccuracy**: The labels of the data are not equal to the TRUE labels of the data
   - For example, in a binary case, malware may be classified as goodware, or vice versa. In a multi-class situation (labels for different families of malware), a malware file maybe labelled with the wrong malware family.
@@ -24,17 +25,20 @@ To read to summary and discussion of the second half of this paper, look [here](
     - A labelling error was made
   - To deal with this issue, methods can be applied in an attempt to clean the dataset
     - One method to consider is for the classifier to predict which datapoints it is uncertain about. Datapoints which have a high level of uncertainty can be pruned from the overall dataset. The pruned dataset can then be used to train a classifier, which can be shown to have a greater performance.
+  - A real like example of label inaccuracy can be seen when comparing datasets labelled 30 or so days apart. When new malware is detected, it may be given a generic label (or incorrect labelling, perhaps due to clustering), but after some time and more samples of the new malware family are generated, then the new label will be applied to it. This will lead to label inaccuracy. Implications of this have been covered in some previous posts ([Discussion 2.1](/discussion-2.1))
 
 - **Data Snooping**: During training/testing the model has access to data it should not have:
   - Test Snooping: Data leakage occurs, so data that should only be in testing is in training dataset
   - Temporal Snooping: Time dependencies are not considered (data is not considered to be coming in a stream); data was split up into test and train without considering when a raw file was first seen.
   - Selective Snooping: Specific datapoints are removed from the original dataset
     - For example, a specific datapoint was removed from the dataset since it a "unlikely" to be seen in the real world is selective removing data.
+  - Examples of this were covered in ([Discussion 2.1](/discussion-2.1)), under Data Leakage or Temporal Inconsitency.
 
 - **Spurious Correlation**: Overfitting on the "noise" of the data, it creates a shortcut for learning, and it would be very easy to exploit by attackers:
   - These correlations do not generalize very well
   - An example of this may be classifying if a file is malicious or not based on the number of tokens in a file.
   - In an attempt to avoid these types of correlations, developers should ensure their models are *explainable*, and can be understood.
+  - Attackers can easily exploit spurious correlations.
 
 - **Biased Parameter Selection**: This is a special case of data snooping where the hyperparameters for the model are based on the test dataset.
 
@@ -46,6 +50,7 @@ To read to summary and discussion of the second half of this paper, look [here](
   - For example, in a highly imbalanced dataset, an ROC curve may show favorable performance, but when plotting precision vs recall graph, we can see much worse results.
   - To mitigate this issue the use of macro or micro averaging can be applied.
   - There will never exist a "hard and fast" rule to use when choosing the right metrics, metrics need to be specific to each context a model is being applied/trained in.
+  - An example of this can be when measuring a model's performance using accuracy, but the False positive rate is greater than expected.
 
 - **Base Rate Fallacy**: This pitfall occurs when the class imbalance is not considered, which leads to a misinterpretation of a model's performance.
   - For example, if there is an imbalance such that there are a greater number of negative class samples than positive, a low False positive rate may still lead to a large overall number of false positives.
@@ -54,10 +59,11 @@ To read to summary and discussion of the second half of this paper, look [here](
 - **Lab Only Eval**: This occurs when a model is designed and tested only in a lab environment, and when training the model external factors (AKA the real world) is not taken into account.
   - For example, not considering the size of a model, the memory a model utilizes, the nature of real world attacks, or not considering training and test data as a stream (not accounting for temporal information of data samples).
   - This pitfall leads to models that work great in a lab setting but fail in the real world
+  - This will occur when researchers only test their models in labs, and do not expose it to the real world.
 
 - **Inappropriate Threat Model**: This occurs when engineers/researchers develop machine learning models do not consider how these models can be exploited by attackers; what are the vulnerabilities of the model?:
   - To mitigate against these issues, developers must consider what types of attacks their model can face. This is best done when developing the model alongside a penetration testing team; attackers and defenders are in constant competition then.
-  - In addition, vulnerabilities must be considered in all stages of the pipeline, not just the model itself but also feature extraction.s
+  - In addition, vulnerabilities must be considered in all stages of the pipeline, not just the model itself but also feature extraction.
 
 
 # Discussion

@@ -6,7 +6,7 @@ description: "Summary of Seminar 2.1"
 
 For the Seminar of week 2 of classes we read the paper: [Machine Learning (In) Security: A Stream of Problems](https://arxiv.org/abs/2010.16045) by Ceschin et al.
 
-I was the one who actually presented the Seminar; it is broken into two parts, Part 1 covering sections 3-5 of the paper (this summary here), and [Part 2](discussion-2.2) covering sections 6-8.
+I was the one who actually presented the Seminar; it is broken into two parts, Part 1 covering sections 3-5 of the paper (this summary here), and [Part 2](/discussion-2.2) covering sections 6-8.
 
 [Here](https://docs.google.com/presentation/d/1QgTdtfIhijsssgfLxCh5vIc6KHJ4pM1_nZcC4hsIzyM/edit?usp=sharing) is the link to the slides I used during presentation.
 
