@@ -54,7 +54,7 @@ For this discussion we covered the paper: [No Need to Teach New Tricks to Old Ma
 
 - In addition, of the AVs that do detect the adversarial sample as malware, the malware family is being misclassified, with most of the adversarial samples being classified as `razy` or `remcos`
 
-- The authors also try to train a model using the adversarial samples they developed, and they see the False Positive Rate (goodware being classified as malware) shot up all the way up to 78%. Given that these adversarial samples were designed in such a way to mimic goodware almost completely, when trainig the model with them, the model is unable to pick up patterns in goodware/malware. Hence leading to such a large FPR.
+- The authors also try to train a model using the adversarial samples they developed, and they see the False Positive Rate (goodware being classified as malware) shot up all the way up to 78%. Given that these adversarial samples were designed in such a way to mimic goodware almost completely, when training the model with them, the model is unable to pick up patterns in goodware/malware. Hence leading to such a large FPR.
 
 # Discussion
 - Why do we use XOR?
@@ -72,8 +72,8 @@ For this discussion we covered the paper: [No Need to Teach New Tricks to Old Ma
 
 - From the analysis from VirusTotal we can see that some AVs perform MUCH better than others on specific malware families.
 
-- What are some pratical, everyday uses of droppers:
-  - ShortCuts, Downloaders, Installers
+- What are some practical, everyday uses of droppers:
+  - ShortCuts, Downloader, Installers
   - Getting data from external resources
 
 - The similarity graph from paper:
