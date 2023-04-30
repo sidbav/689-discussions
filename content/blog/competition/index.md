@@ -6,6 +6,12 @@ description: "Applying what we have learned throughout the semester"
 
 First of all, shoutout to my awesome teammates: [Veronika Maragulova](https://www.linkedin.com/in/vmaragulova), [Soumyajyoti Dutta](https://www.linkedin.com/in/soumyajyoti-dutta-4a4177173) & [Sidharth Anil](https://www.linkedin.com/in/sidharthanil98) (Yes, we share the same name! :D)
 
+# Outline
+1. TL;DR
+2. Competition Details
+3. Our Defense
+4. Our Attacks
+
 # TL;DR
 - Watch our Final Presentation [here](https://drive.google.com/file/d/1QJeIXBmKkMypbiSLtJ1mJV1OwDrWRkqy/view), shoutout to Jenny for recording our presentation!
 - Github Repo [here](https://github.com/sidbav/AV-vs-Evasive)
