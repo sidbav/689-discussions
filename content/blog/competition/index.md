@@ -11,6 +11,7 @@ First of all, shoutout to my awesome teammates: [Veronika Maragulova](https://ww
 2. Competition Details
 3. Our Defense
 4. Our Attacks
+5. Fun Facts
 
 # TL;DR & Important Links
 - Watch our Final Presentation [here](https://drive.google.com/file/d/1QJeIXBmKkMypbiSLtJ1mJV1OwDrWRkqy/view), shoutout to Jenny for recording our presentation!
@@ -87,24 +88,6 @@ We tried out some other defensive strategies as well, but those also did not wor
 - Professor’s feature extractor: This feature extractor has 200,000 features, and given our limited hardware training was taking way too long to leverage this
 - Imbalanced datasets → scared of the Zoo: We found a great dataset called [theZoo](https://github.com/ytisf/theZoo), but we did not want to clone this repo on our computers since it was live malware, and at the time we did not have VMs setup at the time.
 
-## Fun Facts
-- You *cannot* `bash` into our docker image (that is intentional on our part), since (at the time) we believed that this would prevent other teams from whitebox attacking our model. There is a way around this that I that I realized afterwards, which we leverage in our attacks (refer Breaking In Section in attacks for more details)
-  - This was done by adding the command `RUN /bin/sh -c rm /bin/*` in our Dockerfile after all of the setup is complete
-
-- As another defensive measure we list many environment variables that are simply not utilized to throw teams off if they looked at the details of the docker image. For example, all of the model thresholds are incorrect, in fact three of them are my  teammates' birthdays:
-
-  ![](2023-04-30-10-46-04.png)
-  - 31 -> Sid A's Bday
-  - 25 -> Veronika's Bday
-  - 12 -> Soumya's Bday
-
-- Zoe is our "team mascot":
-
-![](2023-04-30-12-09-24.png)
-
-- Mike is [Mike Wazowski](https://en.wikipedia.org/wiki/Mike_Wazowski) from Monster's Inc
-
-- To submit our defensive model we all pulled an all nighter, which is the first time I pulled an all nighter! 100% would not recommend! I would recommend getting blackout curtains though so you can sleep anytime of the day!
 
 # Our Attacks
 
@@ -172,3 +155,22 @@ Else:
 ```
 
 Using this approach we were able to fully bypass 4/6 of the teams model (including ourselves)
+
+# Fun Facts
+- You *cannot* `bash` into our docker image (that is intentional on our part), since (at the time) we believed that this would prevent other teams from whitebox attacking our model. There is a way around this that I that I realized afterwards, which we leverage in our attacks (refer Breaking In Section in attacks for more details)
+  - This was done by adding the command `RUN /bin/sh -c rm /bin/*` in our Dockerfile after all of the setup is complete
+
+- As another defensive measure we list many environment variables that are simply not utilized to throw teams off if they looked at the details of the docker image. For example, all of the model thresholds are incorrect, in fact three of them are my  teammates' birthdays:
+
+  ![](2023-04-30-10-46-04.png)
+  - 31 -> Sid A's Bday
+  - 25 -> Veronika's Bday
+  - 12 -> Soumya's Bday
+
+- Zoe is our "team mascot":
+
+![](2023-04-30-12-09-24.png)
+
+- Mike is [Mike Wazowski](https://en.wikipedia.org/wiki/Mike_Wazowski) from Monster's Inc
+
+- To submit our defensive model we all pulled an all nighter, which is the first time I pulled an all nighter! 100% would not recommend! I would recommend getting blackout curtains though so you can sleep anytime of the day!
