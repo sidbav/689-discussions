@@ -12,7 +12,7 @@ First of all, shoutout to my awesome teammates: [Veronika Maragulova](https://ww
 3. Our Defense
 4. Our Attacks
 
-# TL;DR
+# TL;DR & Important Links
 - Watch our Final Presentation [here](https://drive.google.com/file/d/1QJeIXBmKkMypbiSLtJ1mJV1OwDrWRkqy/view), shoutout to Jenny for recording our presentation!
 - Github Repo [here](https://github.com/sidbav/AV-vs-Evasive)
 - Docker Hub Link of our Malware Detection Model [here](https://hub.docker.com/repository/docker/sidbav/689-final-submission/general) (you will need a docker account to access this!)
