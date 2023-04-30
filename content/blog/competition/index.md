@@ -4,7 +4,7 @@ date: "2023-04-29"
 description: "Applying what we have learned throughout the semester"
 ---
 
-First of all, shoutout to my awesome teammates: [Veronika Maragulova](https://www.linkedin.com/in/vmaragulova), [Soumyajyoti Dutta](https://www.linkedin.com/in/soumyajyoti-dutta-4a4177173/) & [Sidharth Anil](https://www.linkedin.com/in/sidharthanil98) (Yes, we share the same name! :D)
+First of all, shoutout to my awesome teammates: [Veronika Maragulova](https://www.linkedin.com/in/vmaragulova), [Soumyajyoti Dutta](https://www.linkedin.com/in/soumyajyotidutta/) & [Sidharth Anil](https://www.linkedin.com/in/sidharthanil98) (Yes, we share the same name! :D)
 
 # Outline
 1. TL;DR
